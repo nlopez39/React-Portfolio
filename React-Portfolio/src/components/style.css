@@ -1,0 +1,4 @@
+.nav-item::after {
+    background-color: yellow;
+    transition: all 0.2s;
+  }

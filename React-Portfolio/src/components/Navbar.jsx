@@ -1,9 +1,11 @@
 import { Link, useLocation } from 'react-router-dom';
+import Header from './Header';
 function Navbar(){
     // const currentPage = useLocation().pathname;
     return(
         <div>
             <nav class="navbar navbar-expand-lg bg-light">
+              <Header />
             <ul className='navbar-nav me-auto mb-2 mb-lg-0'>
                 <li className='nav-item'>
                <Link to="/"
@@ -28,10 +30,11 @@ function Navbar(){
 
             </nav>
             
-            
+           
             
             
         </div>
+    
 
         
     );

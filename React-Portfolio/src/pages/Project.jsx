@@ -13,7 +13,8 @@ export default function Project(){
                                     <img src={project.img} className="card-img-top img-fluid" alt={project.name} />
                                     <div className="card-body">
                                         <h5 className="card-title">{project.name}</h5>
-                                        <a href={project.demo} className="btn btn-primary">Check it Out</a>
+                                        <a href={project.demo} className="btn btn-primary me-md-2">Demo</a>
+                                        <a href={project.repo} className="btn btn-primary">Github</a>
                                     </div>
                                 </div>
                             </div>
