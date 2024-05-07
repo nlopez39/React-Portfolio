@@ -5,10 +5,10 @@ function Contact(){
     //email
     //comments 
     //submit button
-    const [name, setName] = useState(" ");
-    const [email, setEmail] = useState(" ");
-    const [comment, setComment] = useState(" ");
-    const [errorMessage, setErrorMessage] = useState('');
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [message, setMessage] = useState("");
+    const [errorMessage, setErrorMessage] = useState("");
 
 
     //handle input change
@@ -23,15 +23,15 @@ function Contact(){
         }else if(inputType == "email"){
             setEmail(inputValue);
         }else{
-            setComment(inputValue);
+            setMessage(inputValue);
         }
     }
     //handle the submit button
     const handleFormSubmit = (e) =>{
         e.preventDefault(); 
         //we want to check that the user does not leave any blanks
-        if(!email || !name || !comment){
-            setErrorMessage("Email, username or comment box is Empty!");
+        if(!email || !name || !message){
+            setErrorMessage("Email, username or message box is Empty!");
             return;
            
         }
@@ -68,13 +68,13 @@ function Contact(){
                 </div>
                 
                 <div className='mb-3'>
-                    <label className='form-label'>Comments</label>
+                    <label className='form-label'>Message</label>
                 <textarea className='form-control'
-                value={comment}
+                value={message}
                 onChange={handleInputChange}
-                name="comment"
+                name="message"
                 type="text"
-                placeholder='comment'
+                placeholder='message'
                 style={{height:100}}
                 /> 
                 </div>  
