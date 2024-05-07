@@ -1,97 +1,121 @@
-import {useState}  from 'react';
+import { useState } from "react";
+import { validateEmail } from "../utils/helpers";
 
-function Contact(){
-    //name
-    //email
-    //comments 
-    //submit button
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
-    const [message, setMessage] = useState("");
-    const [errorMessage, setErrorMessage] = useState("");
+function Contact() {
+  //name
+  //email
+  //comments
+  //submit button
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
+  const [submitMessage, setSubmitMessage] = useState("");
 
+  //handle input change
+  //will handle user input from the box, this will change the state of input box
+  const handleInputChange = (e) => {
+    const { target } = e;
+    const inputType = target.name; //what kind of input they are on
+    const inputValue = target.value; //user input
 
-    //handle input change
-    //will handle user input from the box, this will change the state of input box 
-    const handleInputChange = (e) =>{
-        const {target} = e; 
-        const inputType = target.name; //what kind of input they are on
-        const inputValue = target.value; //user input
-        
-        if(inputType === "name"){
-            setName(inputValue);
-        }else if(inputType == "email"){
-            setEmail(inputValue);
-        }else{
-            setMessage(inputValue);
-        }
+    if (inputType === "name") {
+      setName(inputValue);
+    } else if (inputType == "email") {
+      setEmail(inputValue);
+    } else {
+      setMessage(inputValue);
     }
-    //handle the submit button
-    const handleFormSubmit = (e) =>{
-        e.preventDefault(); 
-        //we want to check that the user does not leave any blanks
-        if(!email || !name || !message){
-            setErrorMessage("Email, username or message box is Empty!");
-            return;
-           
-        }
-        alert(`Hello ${name}`);
+  };
+  //handle the email input validation after user has finished typing
+  const handleEmailValidation = () => {
+    if (!validateEmail(email)) {
+      setErrorMessage("Email is incorrect");
+      setSubmitMessage("");
+    } else {
+      setErrorMessage("");
     }
+  };
+  //handle the submit button
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    //check again that the email is valid
 
-    //return a form 
-    return (
-        <div>
-            <h1>Contact Me</h1>
-            <form className='form' onSubmit={handleFormSubmit}>
-             <div className='mb-3'> 
-                <label className="form-label">Name</label>
-                <input className='form-control'
-                value={name}
-                onChange={handleInputChange}
-                name="name"
-                type="name"
-                //these are placeholders for the input box that only appeard when I added onchange 
-                placeholder='name'
-               
-                   
-                />
-                </div>   
-                <div className='mb-3'>
-                    <label className='form-label'>Email</label>
-                <input className='form-control'
-                value={email}
-                onChange={handleInputChange}
-                name="email"
-                type="text"
-                placeholder='email'
-                />
-                </div>
-                
-                <div className='mb-3'>
-                    <label className='form-label'>Message</label>
-                <textarea className='form-control'
-                value={message}
-                onChange={handleInputChange}
-                name="message"
-                type="text"
-                placeholder='message'
-                style={{height:100}}
-                /> 
-                </div>  
-                <button type="submit" className='btn btn-primary'>
-                    Submit
+    handleEmailValidation();
 
-                </button>
-               
-        
-            </form>
-            {errorMessage && (
+    // Check if any field is empty or if the email is incorrect
+    if (!email || !name || !message || !validateEmail(email)) {
+      setErrorMessage("Please fill in all fields correctly.");
+    } else {
+      setSubmitMessage("Submitted Successfully! Thank you");
+      setName("");
+      setEmail("");
+      setMessage("");
+    }
+  };
+
+  //return a form
+  return (
+    <div>
+      <h1>Contact Me</h1>
+      <form className="form" onSubmit={handleFormSubmit}>
+        <div className="mb-3">
+          <label className="form-label">Name</label>
+          <input
+            className="form-control"
+            value={name}
+            onChange={handleInputChange}
+            name="name"
+            type="name"
+            //these are placeholders for the input box that only appeard when I added onchange
+            placeholder="name"
+          />
+        </div>
+        <div className="mb-3">
+          <label className="form-label">Email</label>
+          <input
+            className="form-control"
+            value={email}
+            onChange={handleInputChange}
+            onBlur={handleEmailValidation}
+            name="email"
+            type="text"
+            placeholder="email"
+          />
+        </div>
+
+        <div className="mb-3">
+          <label className="form-label">Message</label>
+          <textarea
+            className="form-control"
+            value={message}
+            onChange={handleInputChange}
+            name="message"
+            type="text"
+            placeholder="message"
+            style={{ height: 100 }}
+          />
+        </div>
+        <button type="submit" className="btn btn-primary">
+          Submit
+        </button>
+      </form>
+      {errorMessage && (
         <div>
-          <p className="error-text">{errorMessage}</p>
+          <p style={{ color: "red" }} className="error-text">
+            {errorMessage}
+          </p>
         </div>
       )}
+      {submitMessage && (
+        <div>
+          <p style={{ color: "blue" }} className="success-text">
+            {submitMessage}
+          </p>
         </div>
-    );
+      )}
+    </div>
+  );
 }
 
 export default Contact;
