@@ -1,6 +1,7 @@
 {
   "name": "react-portfolio",
   "private": false,
+  "homepage": "https://cheerful-tiramisu-9a3c97.netlify.app",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
