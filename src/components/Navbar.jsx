@@ -1,11 +1,11 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Header from "./Header";
 function Navbar() {
   // const currentPage = useLocation().pathname;
   return (
     <div
-      className="d-flex justify-content-between navbar navbar-expand-lg p-4"
-      style={{ backgroundColor: "#8E443D", color: "#EDE3E4" }}
+      className="d-flex justify-content-between navbar navbar-expand-lg p-4 main-navbar"
+      // style={{ backgroundColor: "#8E443D", color: "#EDE3E4" }}
     >
       <Header />
       <nav>
@@ -15,7 +15,8 @@ function Navbar() {
               to="/"
               className="nav-link active"
               style={{
-                color: "#EDE3E4",
+                color: "#ede3e4",
+
                 fontFamily: "Tenor Sans, sans-serif",
               }}
             >
@@ -26,10 +27,7 @@ function Navbar() {
             <Link
               to="/Project"
               className="nav-link active"
-              style={{
-                color: "#EDE3E4",
-                fontFamily: "Tenor Sans, sans-serif",
-              }}
+              style={{ color: "#ede3e4", fontFamily: "Tenor Sans, sans-serif" }}
             >
               Portfolio
             </Link>
@@ -38,10 +36,7 @@ function Navbar() {
             <Link
               to="/Contact"
               className="nav-link active"
-              style={{
-                color: "#EDE3E4",
-                fontFamily: "Tenor Sans, sans-serif",
-              }}
+              style={{ color: "#ede3e4", fontFamily: "Tenor Sans, sans-serif" }}
             >
               Contact
             </Link>
@@ -50,10 +45,7 @@ function Navbar() {
             <Link
               to="/Resume"
               className="nav-link active"
-              style={{
-                color: "#EDE3E4",
-                fontFamily: "Tenor Sans, sans-serif",
-              }}
+              style={{ color: "#ede3e4", fontFamily: "Tenor Sans, sans-serif" }}
             >
               Resume
             </Link>

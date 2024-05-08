@@ -23,26 +23,18 @@ export default function Project() {
                     </h5>
                     <a
                       href={project.demo}
-                      className="btn btn me-md-2"
-                      style={{
-                        background: "#0F0E0E",
-                        color: "#EDE3E4",
-                        textDecoration: "none", // Remove underline on hover
-                        transition: "background-color 0.3s, color 0.3s", // Smooth transition effect
-                      }}
-                      onMouseEnter={(e) =>
-                        (e.target.style.background = "#2c3e50")
-                      } // Change background color on hover
-                      onMouseLeave={(e) =>
-                        (e.target.style.background = "#0F0E0E")
-                      } // Restore background color when not hovered
+                      className="btn btn me-md-2 demo-btn"
+                      // style={{
+                      //   background: "#0F0E0E",
+                      //   color: "#EDE3E4",
+                      // }}
                     >
                       Demo
                     </a>
                     <a
                       href={project.repo}
-                      className="btn btn"
-                      style={{ background: "#0F0E0E", color: "#EDE3E4" }}
+                      className="btn btn github-btn"
+                      // style={{ background: "#0F0E0E", color: "#EDE3E4" }}
                     >
                       Github
                     </a>
