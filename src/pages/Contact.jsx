@@ -98,8 +98,8 @@ function Contact() {
         </div>
         <button
           type="submit"
-          className="btn btn"
-          style={{ color: "#EDE3E4", background: "black" }}
+          className="btn btn submit-btn"
+          // style={{ color: "#EDE3E4", background: "black" }}
         >
           Submit
         </button>
