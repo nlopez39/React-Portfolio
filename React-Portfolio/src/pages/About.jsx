@@ -4,9 +4,9 @@ export default function About() {
   return (
     <div className="mt-3" style={{ background: "#EDE3E4" }}>
       <h1>About Me</h1>
-      <RxAvatar size={70} />
+      <RxAvatar size={70} className="mt-5" />
 
-      <p className="mb-0">
+      <p className="mt-5">
         Nunc pharetra finibus est at efficitur. Praesent sed congue diam.
         Integer gravida dui mauris, ut interdum nunc egestas sed. Aenean sed
         mollis diam. Nunc aliquet risus ac finibus porta. Nam quis arcu non

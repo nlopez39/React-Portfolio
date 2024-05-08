@@ -23,7 +23,7 @@ export default function Project() {
                     </h5>
                     <a
                       href={project.demo}
-                      className="btn btn-link me-md-2"
+                      className="btn btn me-md-2"
                       style={{
                         background: "#0F0E0E",
                         color: "#EDE3E4",
@@ -41,7 +41,7 @@ export default function Project() {
                     </a>
                     <a
                       href={project.repo}
-                      className="btn btn-link"
+                      className="btn btn"
                       style={{ background: "#0F0E0E", color: "#EDE3E4" }}
                     >
                       Github

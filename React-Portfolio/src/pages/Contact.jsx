@@ -56,7 +56,7 @@ function Contact() {
 
   //return a form
   return (
-    <div>
+    <div className="mt-3">
       <h1>Contact Me</h1>
       <form className="form" onSubmit={handleFormSubmit}>
         <div className="mb-3">
@@ -96,7 +96,11 @@ function Contact() {
             style={{ height: 100 }}
           />
         </div>
-        <button type="submit" className="btn btn-primary">
+        <button
+          type="submit"
+          className="btn btn"
+          style={{ color: "#EDE3E4", background: "black" }}
+        >
           Submit
         </button>
       </form>
