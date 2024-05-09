@@ -1,4 +1,5 @@
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+
 export default function Footer() {
   return (
     <div
@@ -24,6 +25,11 @@ export default function Footer() {
               className="nav-link px-2 text-body-secondary"
             >
               <FaLinkedin size={50} />
+            </a>
+          </li>
+          <li className="nav-item">
+            <a href="" className="nav-link px-2 text-body-secondary">
+              <FaTwitter size={50} />
             </a>
           </li>
         </ul>
