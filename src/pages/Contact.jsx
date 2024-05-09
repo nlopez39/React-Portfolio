@@ -36,6 +36,24 @@ function Contact() {
       setErrorMessage("");
     }
   };
+  //handle message being empty
+  const handleMessageBox = () => {
+    if (!message) {
+      setErrorMessage("Please fill in message");
+      setSubmitMessage("");
+    } else {
+      setErrorMessage("");
+    }
+  };
+  //handle name box; make sure user filled it in before moving along
+  const handleNameBox = () => {
+    if (!name) {
+      setErrorMessage("Please fill in name");
+      setSubmitMessage("");
+    } else {
+      setErrorMessage("");
+    }
+  };
   //handle the submit button
   const handleFormSubmit = (e) => {
     e.preventDefault();
@@ -65,6 +83,7 @@ function Contact() {
             className="form-control"
             value={name}
             onChange={handleInputChange}
+            onBlur={handleNameBox}
             name="name"
             type="name"
             //these are placeholders for the input box that only appeard when I added onchange
@@ -90,6 +109,7 @@ function Contact() {
             className="form-control"
             value={message}
             onChange={handleInputChange}
+            onBlur={handleMessageBox}
             name="message"
             type="text"
             placeholder="message"
@@ -113,7 +133,7 @@ function Contact() {
       )}
       {submitMessage && (
         <div>
-          <p style={{ color: "blue" }} className="success-text">
+          <p style={{ color: "green" }} className="success-text">
             {submitMessage}
           </p>
         </div>
