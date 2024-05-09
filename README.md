@@ -24,6 +24,8 @@ Welcome to my portfolio! Built with ReactJS using Vite for lightning-fast develo
 
 https://cheerful-tiramisu-9a3c97.netlify.app/
 
+![alt text](./public/images/cheerful-tiramisu-9a3c97.netlify.app_.png)
+
 ## Installation
 
 To install this project you can either perform a `git clone` in your command-line or simply fork your own copy into your Github.
