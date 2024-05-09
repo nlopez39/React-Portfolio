@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Header from "./Header";
 function Navbar() {
-  // const currentPage = useLocation().pathname;
+  const currentPage = useLocation().pathname;
   return (
     <div
       className="d-flex justify-content-between navbar navbar-expand-lg p-4 main-navbar"
@@ -13,7 +13,7 @@ function Navbar() {
           <li className="nav-item">
             <Link
               to="/"
-              className="nav-link active"
+              className={currentPage === "/" ? "nav-link active" : "nav-link"}
               style={{
                 color: "#ede3e4",
 
@@ -26,7 +26,9 @@ function Navbar() {
           <li className="nav-item">
             <Link
               to="/Project"
-              className="nav-link active"
+              className={
+                currentPage === "/Project" ? "nav-link active" : "nav-link"
+              }
               style={{ color: "#ede3e4", fontFamily: "Tenor Sans, sans-serif" }}
             >
               Portfolio
@@ -35,7 +37,9 @@ function Navbar() {
           <li className="nav-item">
             <Link
               to="/Contact"
-              className="nav-link active"
+              className={
+                currentPage === "/Contact" ? "nav-link active" : "nav-link"
+              }
               style={{ color: "#ede3e4", fontFamily: "Tenor Sans, sans-serif" }}
             >
               Contact
@@ -44,7 +48,9 @@ function Navbar() {
           <li className="nav-item">
             <Link
               to="/Resume"
-              className="nav-link active"
+              className={
+                currentPage === "/Resume" ? "nav-link active" : "nav-link"
+              }
               style={{ color: "#ede3e4", fontFamily: "Tenor Sans, sans-serif" }}
             >
               Resume

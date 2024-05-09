@@ -33,4 +33,6 @@
     transform: translateY(-3px);
   }
 
-  
+  .nav-link.active {
+    background-color: rgb(90, 83, 83);
+  }
