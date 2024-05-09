@@ -1,7 +1,13 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 export default function Footer() {
   return (
-    <div className="footer-wrapper">
+    <div
+      className="footer-wrapper"
+      style={{
+        // outline: "solid purple 2px",
+        marginTop: "auto",
+      }}
+    >
       <footer className="py-3 my-4" style={{ marginTop: "auto" }}>
         <ul className="nav justify-content-center border-bottom  pb-3 mb-3">
           <li className="nav-item">
