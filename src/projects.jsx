@@ -1,19 +1,19 @@
 export const projects = [
   {
     id: 1,
+    name: "TrackFit",
+    description: "Projec t2",
+    demo: "https://immense-savannah-94600-01fc64ff673b.herokuapp.com/",
+    repo: "https://github.com/nlopez39/TrackFit",
+    img: "./images/localhost_3000_.png",
+  },
+  {
+    id: 2,
     name: "ANA-MARKET",
     description: "Project 1",
     demo: "https://ana-market-eae58deca7b8.herokuapp.com/",
     repo: "https://github.com/nlopez39/ana-market",
     img: "./images/ana-market.png",
-  },
-  {
-    id: 2,
-    name: "Weather App",
-    description: "Projec t2",
-    demo: "https://nlopez39.github.io/Weather-App/",
-    repo: "https://github.com/nlopez39/Weather-App",
-    img: "./images/weather-app.png",
   },
   {
     id: 3,
@@ -41,10 +41,10 @@ export const projects = [
   },
   {
     id: 6,
-    name: "Social Network API",
-    description: "Project 6",
-    demo: "https://drive.google.com/file/d/1Rx1QopFYpgGCXLUWBLD0mdSYhYSbfA7C/view",
-    repo: "https://github.com/nlopez39/Social-Network-API",
-    img: "./images/social-media.png",
+    name: "Weather App",
+    description: "Projec t6",
+    demo: "https://nlopez39.github.io/Weather-App/",
+    repo: "https://github.com/nlopez39/Weather-App",
+    img: "./images/weather-app.png",
   },
 ];
