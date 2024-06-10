@@ -18,7 +18,7 @@ export default function Resume() {
       </ul>
       <p style={{ color: "#320A28" }}>
         Download my resume:{" "}
-        <a href="https://drive.google.com/file/d/1PpsKIoIFgiBRD-rxqB-Ls0s5gVWrPI9V/view?usp=sharing">
+        <a href="https://drive.google.com/file/d/11T8lJxIQZLsMMf2MziBQXdxK5tEyL5xS/view?usp=sharing">
           Here!
         </a>
       </p>
